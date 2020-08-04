@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Route::get('mhs','MahasiswaController@index');
+Route::get('/',function(){
+    return view('welcome');
+});
 Route::get('mhs','MahasiswaController@index');
