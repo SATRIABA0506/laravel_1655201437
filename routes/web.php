@@ -14,7 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('mhs','MahasiswaController@index');
-Route::get('/',function(){
-    return view('welcome');
-});
-Route::get('mhs','MahasiswaController@index');
+// Route::get('/',function(){
+//     return view('welcome');
+// });
+Route::get('mhs','MahasiswaController@index')->name('mhs.index');
+Route::get('/mhs_list','MahasiswaController@mhs_list')->name('mhs_list');
+Route::get('/mhs/create', 'MahasiswaController@create');
+Route::post('/mhs/store', 'MahasiswaController@store');
+Route::get('/mhs/edit/{nim}', 'MahasiswaController@edit');
+Route::put('/mhs/update/{mahasiswa:nim}', 'MahasiswaController@update')->name('mhs.update');
+Route::get('/mhs/delete/{mahasiswa:nim}', 'MahasiswaController@destroy')->name('mhs.delete');
+//Prodi (Route Framework)
+Route::resource('/prodi', 'ProdiController');
