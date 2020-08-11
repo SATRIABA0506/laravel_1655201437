@@ -5,4 +5,4 @@
                 <p>{{ $message }}</p>
             </div>
         </p>
-   @endif
+   @endif 

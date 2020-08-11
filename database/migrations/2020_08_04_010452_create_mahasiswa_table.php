@@ -14,8 +14,8 @@ class CreateMahasiswaTable extends Migration
     public function up()
     {
         Schema::create('mahasiswa', function (Blueprint $table) {
-            $table->string('nim',13)->primary();
-            $table->string('nama_lengkap',150);
+            $table->string('nim',12)->primary();
+            $table->string('nama_lengkap',100);
             $table->integer('prodi');
             $table->text('alamat');
             $table->timestamps();
